@@ -8,7 +8,7 @@ tags: ['breadcrumbsFR', 'header']
 
 # Chemin de navigation <br>`<gcds-breadcrumbs>`
 
-_Autres noms : fil d’Ariane_
+_Autres noms : fil d’Ariane._
 
 Un chemin d'accès à la page actuelle à partir de chaque niveau précédent de la hiérarchie du site.
 

@@ -6,7 +6,7 @@ eleventyNavigation:
   title: Chemin de navigation
   locale: fr
   parent: componentsFR
-  otherNames: fil d'ariane.
+  otherNames: fil d'Ariane.
   description: Un chemin d'accès à la page actuelle à partir de chaque niveau précédent de la hiérarchie du site.
   thumbnail: /images/common/components/preview-breadcrumbs.svg
   alt: Deux boîtes grises soulignées de bleu foncé avec une flèche bleu à leurs droite. Ces boîtes représentent les liens du chemin de navigation.
