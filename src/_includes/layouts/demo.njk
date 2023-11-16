@@ -3,7 +3,7 @@ layout: "layouts/base.njk"
 ---
 
 <section class="py-600">
-  <h1 class="container-full text-center mb-500">{{ demo[locale].heading }}</h1>
+  <h1 class="mb-500">{{ demo[locale].heading }}</h1>
 
   <h2>{{ demo[locale].subheading }}</h2>
 
@@ -63,6 +63,37 @@ layout: "layouts/base.njk"
     {{ demo[locale].buttons.content.linkExternal }}
   </gcds-button>
 
+  {# ------------- Cards ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].cards.heading }}</h3>
+  <gcds-grid tag="div" columns-desktop="1fr 1fr 1fr" columns-tablet="1fr 1fr" columns="1fr" gap="250">
+    <gcds-card card-title="{{ demo[locale].cards.content.card1.title }}" title-element="h4" href="#red" description="{{ demo[locale].cards.content.card1.description }}" tag="{{ demo[locale].cards.content.card1.tag }}" img-src="{{ demo[locale].cards.content.cardImg }}">
+    </gcds-card>
+
+    <gcds-card card-title="{{ demo[locale].cards.content.card2.title }}" title-element="h4" href="#red" description="{{ demo[locale].cards.content.card2.description }}" img-src="{{ demo[locale].cards.content.cardImg }}">
+    </gcds-card>
+
+    <gcds-card card-title="{{ demo[locale].cards.content.card3.title }}" title-element="h4" href="#red" description="{{ demo[locale].cards.content.card3.description }}" img-src="{{ demo[locale].cards.content.cardImg }}">
+    </gcds-card>
+  </gcds-grid>
+
+  <gcds-grid tag="div" columns-desktop="1fr 1fr" columns-tablet="1fr" columns="1fr" gap="250" class="d-block mt-250">
+    <gcds-card type="action" card-title="{{ demo[locale].cards.content.card4.title }}" title-element="h4" href="#red" description="{{ demo[locale].cards.content.card4.description }}" img-src="{{ demo[locale].cards.content.cardImg }}">
+      <gcds-button type="button" button-role="secondary" slot="footer">
+        {{ demo[locale].cards.content.card4.btnText }}
+      </gcds-button>
+    </gcds-card>
+
+    <gcds-card type="action" card-title="{{ demo[locale].cards.content.card5.title }}" title-element="h4" href="#red" description="{{ demo[locale].cards.content.card5.description }}" img-src="{{ demo[locale].cards.content.cardImg }}">
+      <gcds-button type="button" button-role="secondary" slot="footer">
+        {{ demo[locale].cards.content.card5.btnText }}
+      </gcds-button>
+    </gcds-card>
+  </gcds-grid>
+
+  <gcds-card class="mt-400" card-title="{{ demo[locale].cards.content.card6.title }}" href="#red" description="{{ demo[locale].cards.content.card6.description }}">
+  </gcds-card>
+
   {# ------------- Container ------------- #}
 
   <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].containers.heading }}</h3>
@@ -105,6 +136,9 @@ layout: "layouts/base.njk"
   <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].form.heading }}</h3>
   <gcds-stepper current-step="1" total-steps="4"></gcds-stepper>
   <form>
+    <gcds-error-summary error-links='{"error-href-1": "{{ demo[locale].form.content.errorSummary.error1 }}", "error-href-2": "{{ demo[locale].form.content.errorSummary.error2 }}", "error-href-3": "{{ demo[locale].form.content.errorSummary.error3 }}" }'>
+    </gcds-error-summary>
+
     <gcds-input
       input-id="form-name"
       label="{{ demo[locale].form.content.input.label }}"
@@ -200,56 +234,67 @@ layout: "layouts/base.njk"
     signature-variant="colour"
     skip-to-href="#"
   >
-    <gcds-site-menu slot="menu" alignment="right">
-      <a href="#" class="home-link link-inherit link-no-underline" slot="left">{{ demo[locale].header.content.logo }}</a>
-      <ul>
-        <li>
-          <a href="#">{{ demo[locale].header.content.link }}</a>
-        </li>
-        <li>
-          <a href="#">{{ demo[locale].header.content.link }}</a>
-        </li>
-        <li>
-          <a href="#">{{ demo[locale].header.content.link }}</a>
-        </li>
-      </ul>
-    </gcds-site-menu>
+    <gcds-top-nav slot="menu" label="topbar" alignment="right" lang="{{ demo[locale].header.content.lang }}">
+      <gcds-nav-link href="#red" slot="home">
+        {{ demo[locale].header.content.logo }}
+      </gcds-nav-link>
+      <gcds-nav-link href="#red">{{ demo[locale].header.content.link }}</gcds-nav-link>
+      <gcds-nav-link href="#red" current>{{ demo[locale].header.content.link }}</gcds-nav-link>
+      <gcds-nav-group
+        menu-label="{{ demo[locale].header.content.group }} submenu"
+        open-trigger="{{ demo[locale].header.content.group }}"
+      >
+        <gcds-nav-link href="#red">{{ demo[locale].header.content.link }}</gcds-nav-link>
+        <gcds-nav-link href="#red">{{ demo[locale].header.content.link }}</gcds-nav-link>
+        <gcds-nav-link href="#red">{{ demo[locale].header.content.link }}</gcds-nav-link>
+      </gcds-nav-group>
+    </gcds-top-nav>
     <gcds-breadcrumbs slot="breadcrumb">
       <gcds-breadcrumbs-item href="#">{{ demo[locale].header.content.breadcrumb }}</gcds-breadcrumbs-item>
     </gcds-breadcrumbs>
   </gcds-header>
 
+  {# ------------- Heading ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].headings.heading }}</h3>
+  <h1>{{ demo[locale].headings.content.h1 }}</h1>
+  <h2>{{ demo[locale].headings.content.h2 }}</h2>
+  <h3>{{ demo[locale].headings.content.h3 }}</h3>
+  <h4>{{ demo[locale].headings.content.h4 }}</h4>
+  <h5>{{ demo[locale].headings.content.h5 }}</h5>
+  <h6>{{ demo[locale].headings.content.h6 }}</h6>
+
   {# ------------- Icons ------------- #}
 
   <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].icons.heading }}</h3>
-  <gcds-icon name="tree" size="caption" margin-right="200"></gcds-icon>
-  <gcds-icon name="tree" size="text" margin-right="200"></gcds-icon>
-  <gcds-icon name="tree" size="h6" margin-right="200"></gcds-icon>
-  <gcds-icon name="tree" size="h5" margin-right="200"></gcds-icon>
-  <gcds-icon name="tree" size="h4" margin-right="200"></gcds-icon>
-  <gcds-icon name="tree" size="h3" margin-right="200"></gcds-icon>
-  <gcds-icon name="tree" size="h2" margin-right="200"></gcds-icon>
-  <gcds-icon name="tree" size="h1" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="caption" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="text" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h6" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h5" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h4" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h3" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h2" margin-right="200"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h1" margin-right="200"></gcds-icon>
 
   <h4 class="mt-500 mb-300">{{ demo[locale].icons.content.fixed }}</h4>
-  <gcds-icon name="tree" size="caption" fixed-width></gcds-icon>
-  <gcds-icon name="tree" size="text" fixed-width></gcds-icon>
-  <gcds-icon name="tree" size="h6" fixed-width></gcds-icon>
-  <gcds-icon name="tree" size="h5" fixed-width></gcds-icon>
-  <gcds-icon name="tree" size="h4" fixed-width></gcds-icon>
-  <gcds-icon name="tree" size="h3" fixed-width></gcds-icon>
-  <gcds-icon name="tree" size="h2" fixed-width></gcds-icon>
-  <gcds-icon name="tree" size="h1" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="caption" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="text" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h6" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h5" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h4" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h3" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h2" fixed-width></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h1" fixed-width></gcds-icon>
 
   <h4 class="mt-500 mb-300">{{ demo[locale].icons.content.variable }}</h4>
-  <gcds-icon name="tree" size="caption"></gcds-icon>
-  <gcds-icon name="tree" size="text"></gcds-icon>
-  <gcds-icon name="tree" size="h6"></gcds-icon>
-  <gcds-icon name="tree" size="h5"></gcds-icon>
-  <gcds-icon name="tree" size="h4"></gcds-icon>
-  <gcds-icon name="tree" size="h3"></gcds-icon>
-  <gcds-icon name="tree" size="h2"></gcds-icon>
-  <gcds-icon name="tree" size="h1"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="caption"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="text"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h6"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h5"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h4"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h3"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h2"></gcds-icon>
+  <gcds-icon name="{{ demo[locale].icons.content.icon }}" size="h1"></gcds-icon>
 
   {# ------------- Pagination ------------- #}
 
@@ -283,4 +328,71 @@ layout: "layouts/base.njk"
     <gcds-icon name="tree" size="sm" slot="banner-icon-left"></gcds-icon>
     <p slot="banner-text">{{ demo[locale].phaseBanner.content.text }}</p>
   </gcds-phase-banner>
+
+  {# ------------- Search ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].search.heading }}</h3>
+  <gcds-search></gcds-search>
+
+  {# ------------- Side navigation ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].sideNavigation.heading }}</h3>
+  <gcds-side-nav label="Label">
+    <gcds-nav-link href="#">Nav link</gcds-nav-link>
+    <gcds-nav-link href="#">Nav link</gcds-nav-link>
+
+    <gcds-nav-group open-trigger="Nav group label" menu-label="Nav group label">
+      <gcds-nav-link href="#">Nav link</gcds-nav-link>
+      <gcds-nav-link href="#">Nav link</gcds-nav-link>
+
+      <gcds-nav-group open-trigger="Nav group label" menu-label="Nav group label sublevel">
+        <gcds-nav-link href="#">Nav link</gcds-nav-link>
+        <gcds-nav-link href="#">Nav link</gcds-nav-link>
+        <gcds-nav-link href="#">Nav link</gcds-nav-link>
+      </gcds-nav-group>
+    </gcds-nav-group>
+  </gcds-side-nav>
+
+  {# ------------- Signature ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].signature.heading }}</h3>
+
+  <p class="mb-400">{{ demo[locale].signature.content.typeSignature }}</p>
+  <gcds-signature ></gcds-signature>
+
+  <p class="mt-500 mb-400">{{ demo[locale].signature.content.typeWordmark }}</p>
+  <gcds-signature type="wordmark"></gcds-signature>
+
+  {# ------------- Screen reader only ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].screenReaderOnly.heading }}</h3>
+  <gcds-sr-only>{{ demo[locale].screenReaderOnly.content.textA11y }}</gcds-sr-only>
+  <p>({{ demo[locale].screenReaderOnly.content.text }})</p>
+
+  {# ------------- Text ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].text.heading }}</h3>
+  TO DO
+
+  {# ------------- Theme and topic menu ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].topicMenu.heading }}</h3>
+  <gcds-topic-menu></gcds-topic-menu>
+
+  {# ------------- Top navigation ------------- #}
+
+  <h3 class="container-full mt-700 mb-400 bb-sm">{{ demo[locale].topNav.heading }}</h3>
+  <gcds-top-nav label="Top navigation" alignment="right">
+    <gcds-nav-link href="#home" slot="home">
+      {{ demo[locale].topNav.content.home }}
+    </gcds-nav-link>
+    <gcds-nav-link href="#">{{ demo[locale].topNav.content.link1 }}</gcds-nav-link>
+    <gcds-nav-group  open-trigger="{{ demo[locale].topNav.content.group1 }}" menu-label="{{ demo[locale].topNav.content.group1 }}">
+      <gcds-nav-link href="#">{{ demo[locale].topNav.content.group1Link1 }}</gcds-nav-link>
+      <gcds-nav-link href="#">{{ demo[locale].topNav.content.group1Link2 }}</gcds-nav-link>
+      <gcds-nav-link href="#">{{ demo[locale].topNav.content.group1Link3 }}</gcds-nav-link>
+    </gcds-nav-group>
+    <gcds-nav-link current href="#">{{ demo[locale].topNav.content.link2 }}</gcds-nav-link>
+    <gcds-nav-link href="#">{{ demo[locale].topNav.content.link3 }}</gcds-nav-link>
+  </gcds-top-nav>
 </section>

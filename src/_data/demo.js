@@ -29,6 +29,42 @@ module.exports = {
         linkExternal: 'External link',
       },
     },
+    cards: {
+      heading: 'Cards',
+      content: {
+        cardImg: 'https://picsum.photos/480/270',
+        card1: {
+          title: 'Link card number 1',
+          description: 'This is a card.',
+          tag: 'Core',
+        },
+        card2: {
+          title: 'Link card number 2 with a longer title',
+          description: 'This is a card with an img and possibly more.',
+        },
+        card3: {
+          title: 'Link card number 3',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra ex at scelerisque vulputate. Morbi malesuada interdum augue. Nam id quam non orci aliquam malesuada sit amet ut magna.',
+        },
+        card4: {
+          title: 'Action card number 1',
+          description:
+            'Morbi malesuada interdum augue. Nam id quam non orci aliquam malesuada sit amet ut magna.',
+          btnText: 'Action',
+        },
+        card5: {
+          title: 'Action card number 2',
+          description: 'This is a card with an img and possibly more.',
+          btnText: 'Action',
+        },
+        card6: {
+          title: 'Card not in column',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra ex at scelerisque vulputate. Morbi malesuada interdum augue. Nam id quam non orci aliquam malesuada sit amet ut magna.',
+        },
+      },
+    },
     containers: {
       heading: 'Containers',
       content: {
@@ -60,6 +96,11 @@ module.exports = {
     form: {
       heading: 'Form Elements (including stepper)',
       content: {
+        errorSummary: {
+          error1: 'Error summary item.',
+          error2: 'Error summary item.',
+          error3: 'Error summary item.',
+        },
         input: {
           label: 'Name',
           hint: 'Enter your full name.',
@@ -115,12 +156,25 @@ module.exports = {
         lang: 'en',
         logo: 'GC Design system',
         link: 'Site menu link',
+        group: 'Nav group',
         breadcrumb: 'Home',
+      },
+    },
+    headings: {
+      heading: 'Headings',
+      content: {
+        h1: 'Heading level H1',
+        h2: 'Heading level H2',
+        h3: 'Heading level H3',
+        h4: 'Heading level H4',
+        h5: 'Heading level H5',
+        h6: 'Heading level H6',
       },
     },
     icons: {
       heading: 'Icons',
       content: {
+        icon: 'close',
         fixed: 'Fixed width icons (square ratio)',
         variable: 'Variable width icons (auto width)',
       },
@@ -138,6 +192,45 @@ module.exports = {
       heading: 'Phase banner',
       content: {
         text: 'Exciting announcement.',
+      },
+    },
+    search: {
+      heading: 'Search',
+    },
+    sideNavigation: {
+      heading: 'Side navigation',
+    },
+    signature: {
+      heading: 'Signature',
+      content: {
+        typeSignature: 'Type signature:',
+        typeWordmark: 'Type wordmark:',
+      },
+    },
+    screenReaderOnly: {
+      heading: 'Screen reader only',
+      content: {
+        textA11y: 'Text only seen by assistive technologies.',
+        text: 'Text will only be accessibile to assistive technologies.',
+      },
+    },
+    text: {
+      heading: 'Text',
+    },
+    topicMenu: {
+      heading: 'Theme and topic menu',
+    },
+    topNav: {
+      heading: 'Top navigation',
+      content: {
+        home: 'Home',
+        link1: 'Link 1',
+        link2: 'Link 2',
+        link3: 'Link 3',
+        group1: 'Group 1',
+        group1Link1: 'Group 1 link 1',
+        group1Link2: 'Group 1 link 2',
+        group1Link3: 'Group 1 link 3',
       },
     },
   },
@@ -171,6 +264,42 @@ module.exports = {
         linkExternal: 'Lien externe',
       },
     },
+    cards: {
+      heading: 'Carte',
+      content: {
+        cardImg: 'https://picsum.photos/480/270',
+        card1: {
+          title: 'Link card number 1',
+          description: 'This is a card.',
+          tag: 'Core',
+        },
+        card2: {
+          title: 'Link card number 2 with a longer title',
+          description: 'This is a card with an img and possibly more.',
+        },
+        card3: {
+          title: 'Link card number 3',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra ex at scelerisque vulputate. Morbi malesuada interdum augue. Nam id quam non orci aliquam malesuada sit amet ut magna.',
+        },
+        card4: {
+          title: 'Action card number 1',
+          description:
+            'Morbi malesuada interdum augue. Nam id quam non orci aliquam malesuada sit amet ut magna.',
+          btnText: 'Action',
+        },
+        card5: {
+          title: 'Action card number 2',
+          description: 'This is a card with an img and possibly more.',
+          btnText: 'Action',
+        },
+        card6: {
+          title: 'Card not in column',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra ex at scelerisque vulputate. Morbi malesuada interdum augue. Nam id quam non orci aliquam malesuada sit amet ut magna.',
+        },
+      },
+    },
     containers: {
       heading: 'Boîtes',
       content: {
@@ -202,6 +331,11 @@ module.exports = {
     form: {
       heading: "Éléments de formulaires (indicateur d'étape compris)",
       content: {
+        errorSummary: {
+          error1: 'Error summary item.',
+          error2: 'Error summary item.',
+          error3: 'Error summary item.',
+        },
         input: {
           label: 'Nom',
           hint: 'Inscrivez votre nom complet.',
@@ -257,12 +391,25 @@ module.exports = {
         lang: 'fr',
         logo: 'Système de design GC',
         link: 'Lien vers le menu du site',
+        group: 'Nav group',
         breadcrumb: 'Accueil ',
+      },
+    },
+    headings: {
+      heading: 'Titre',
+      content: {
+        h1: 'Heading level H1',
+        h2: 'Heading level H2',
+        h3: 'Heading level H3',
+        h4: 'Heading level H4',
+        h5: 'Heading level H5',
+        h6: 'Heading level H6',
       },
     },
     icons: {
       heading: 'Icônes',
       content: {
+        icon: 'close',
         fixed: 'Icônes de largeur fixe (ratio carré)',
         variable: 'Icônes de largeur variable (largeur automatique)',
       },
@@ -280,6 +427,45 @@ module.exports = {
       heading: 'Bannière de statut',
       content: {
         text: 'Annonce palpitante.',
+      },
+    },
+    search: {
+      heading: 'Recherche',
+    },
+    sideNavigation: {
+      heading: 'Barre de navigation latérale',
+    },
+    signature: {
+      heading: 'Signature',
+      content: {
+        typeSignature: 'Type signature:',
+        typeWordmark: 'Type wordmark:',
+      },
+    },
+    screenReaderOnly: {
+      heading: 'Screen reader only',
+      content: {
+        textA11y: 'Text only seen by assistive technologies.',
+        text: 'Text will only be accessibile to assistive technologies.',
+      },
+    },
+    text: {
+      heading: 'Texte',
+    },
+    topicMenu: {
+      heading: 'Menu des thèmes et sujets',
+    },
+    topNav: {
+      heading: 'Barre de navigation supérieure',
+      content: {
+        home: 'Home',
+        link1: 'Link 1',
+        link2: 'Link 2',
+        link3: 'Link 3',
+        group1: 'Group 1',
+        group1Link1: 'Group 1 link 1',
+        group1Link2: 'Group 1 link 2',
+        group1Link3: 'Group 1 link 3',
       },
     },
   },
