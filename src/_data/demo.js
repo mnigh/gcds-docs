@@ -1,7 +1,6 @@
 module.exports = {
   en: {
     heading: 'GC Design System Demo',
-    subheading: 'Components',
     alerts: {
       heading: 'Alerts',
       content: {
@@ -179,6 +178,9 @@ module.exports = {
         variable: 'Variable width icons (auto width)',
       },
     },
+    links: {
+      heading: 'Links',
+    },
     pagination: {
       heading: 'Pagination',
       content: {
@@ -216,6 +218,22 @@ module.exports = {
     },
     text: {
       heading: 'Text',
+      content: {
+        text1:
+          'This text is primary text using the default body size. The margin bottom is set to "400". The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text2:
+          'This text is primary text using the default body size. The margin bottom is set to "400". The characters limit is set to "false" which means that the text will take up all available space.',
+        text3:
+          'This text is secondary text using the default body size. The margin bottom is set to "400". The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text4:
+          'This text is light text using the default body size. The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text5:
+          'This text is primary text using the caption size. The margin bottom is set to "400". The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text6: 'This text is primary text using the default body size',
+        text6Bold: 'with some bold text included',
+        text7: 'This text is primary text using the default body size',
+        text7Italic: 'with some italic text included',
+      },
     },
     topicMenu: {
       heading: 'Theme and topic menu',
@@ -236,7 +254,6 @@ module.exports = {
   },
   fr: {
     heading: 'Démonstration de Système de design GC',
-    subheading: 'Composants',
     alerts: {
       heading: 'Alertes',
       content: {
@@ -414,6 +431,9 @@ module.exports = {
         variable: 'Icônes de largeur variable (largeur automatique)',
       },
     },
+    links: {
+      heading: 'Links',
+    },
     pagination: {
       heading: 'Pagination',
       content: {
@@ -450,7 +470,23 @@ module.exports = {
       },
     },
     text: {
-      heading: 'Texte',
+      heading: 'Text',
+      content: {
+        text1:
+          'This text is primary text using the default body size. The margin bottom is set to "400". The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text2:
+          'This text is primary text using the default body size. The margin bottom is set to "400". The characters limit is set to "false" which means that the text will take up all available space.',
+        text3:
+          'This text is secondary text using the default body size. The margin bottom is set to "400". The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text4:
+          'This text is light text using the default body size. The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text5:
+          'This text is primary text using the caption size. The margin bottom is set to "400". The character limit is set to "true" (default value) which means that the text will take up a maximum of 65 characters per line.',
+        text6: 'This text is primary text using the default body size',
+        text6Bold: 'with some bold text included',
+        text7: 'This text is primary text using the default body size',
+        text7Italic: 'with some italic text included',
+      },
     },
     topicMenu: {
       heading: 'Menu des thèmes et sujets',
